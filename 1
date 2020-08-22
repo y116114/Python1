@@ -1,1 +1,17 @@
 练习
+times =  3
+secret = "FishC.com"
+code = 0
+while (code != secret) and (times > 0):
+    code = input("请输入密码:")
+    if code == secret:
+        times -= 1
+        print("密码输入正确，进入程序......")
+    elif '*' in code:
+        print(" 密码中不能含有*! 您还有",times,"次机会！",end = " ")
+        continue
+    else:
+        print("密码错误! 您还有",times - 1,"次机会！",end = " ")
+        times -= 1
+print("您最终剩余",times,"次机会")
+    
